@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="c:\Users\bivan\Downloads\logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Travel Explorer</div>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#about">About</a></li>
+                    <li><a href="besttime.html" target="_blank" id="besttime-link" style="color:#6c63ff;font-weight:600;text-decoration:none;font-size:1.08rem;margin-left:1.5rem;">Best Time To Visit</a></li>
+                <!-- Removed Best time to visit link -->
+            </ul>
+        </div>
+    </nav>
+    <header class="hero-section">
+        <div class="container hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore beautiful destinations, view stunning photos, and check the latest weather to plan your perfect trip.</p>
+            <a href="#destinations" class="btn-primary">Start Exploring</a>
+        </div>
+    </header>
+    <main>
+        <section id="destinations" class="section">
+            <div class="container">
+                <h2>Popular Destinations in India</h2>
+                <!-- Modal for destination details -->
+                <div id="destination-modal" class="destination-modal" style="display:none;">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-description"></p>
+                        <div id="modal-images" class="modal-images"></div>
+                    </div>
+                </div>
+                <form id="destination-form" class="destination-form">
+                    <input type="text" id="destination-input" placeholder="Search for a destination (e.g., Paris, Tokyo)" required>
+                    <button type="submit" class="btn-primary">Search</button>
+                </form>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGFqJTIwbWFoYWx8ZW58MHx8MHx8fDA%3D" alt="Taj Mahal">
+                        <div class="gallery-caption">Taj Mahal</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.istockphoto.com/id/535168027/photo/india-goa-palolem-beach.webp?a=1&b=1&s=612x612&w=0&k=20&c=C0XaAWEkus7pLTGKZOy75Mu0P4VoVorNAWsxY5faLMA=" alt="Goa">
+                        <div class="gallery-caption">Goa</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jaipur">
+                        <div class="gallery-caption">Jaipur</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://plus.unsplash.com/premium_photo-1697729438401-fcb4ff66d9a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kerala">
+                        <div class="gallery-caption">Kerala</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=" https://media.istockphoto.com/id/1139201384/photo/varanasi-temple.jpg?s=612x612&w=0&k=20&c=bpYnBGweh6PoWt535u5lj09nvi6wEKV7LrWHkhA3qD0=" alt="Varanasi">
+                        <div class="gallery-caption">Varanasi</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.istockphoto.com/id/539018660/photo/taj-mahal-hotel-and-gateway-of-india.jpg?s=612x612&w=0&k=20&c=L1LJVrYMS8kj2rJKlQMcUR88vYoAZeWbYIGkcTo6QV0=" alt="Mumbai">
+                        <div class="gallery-caption">Mumbai</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.istockphoto.com/id/471052720/photo/india-gate-delhi-illuminated-dusk-scene.jpg?s=612x612&w=0&k=20&c=L714iEOhpNMAO3tuWY1MzOeExNLFR71XQQJc0iDXtPY=" alt="Delhi">
+                        <div class="gallery-caption">Delhi</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.istockphoto.com/id/1069264492/photo/spectacular-view-of-the-lakshman-temple-bathed-by-the-sacred-river-ganges-at-sunset.jpg?s=612x612&w=0&k=20&c=f-H_D86P9wO-q4E0Iv9VTy0EZeLa5izQUQCMSVCSzWk=" alt="Rishikesh">
+                        <div class="gallery-caption">Rishikesh</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="weather" class="section dark-section">
+            <div class="container">
+                <h2>Check Weather</h2>
+                <form id="weather-form">
+                    <input type="text" id="city-input" placeholder="Enter city name" required>
+                    <button type="submit" class="btn-primary">Get Weather</button>
+                </form>
+                <div id="weather-result"></div>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Travel Explorer</h2>
+                <p>Travel Explorer helps you plan your trips with ease. Browse destinations, see beautiful photos, and get up-to-date weather information—all in one place.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<!-- Example: round purple logo with white T -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#6c63ff"/>
+  <text x="32" y="44" text-anchor="middle" font-size="36" font-family="Poppins, Arial, sans-serif" fill="#fff">T</text>
+</svg>
